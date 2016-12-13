@@ -8,4 +8,4 @@
 
 module load cuda
 
-mpirun -gpu -n 64 --map-by ppr:16:node ./MPS_crash
+mpirun -n 64 --map-by ppr:16:node ./MPS_crash
