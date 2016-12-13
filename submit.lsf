@@ -3,9 +3,9 @@
 #BSUB -J MPS_crash
 #BSUB -o mps.o%J
 #BSUB -e mps.e%J
-#BSUB -n 80
+#BSUB -n 20
 #BSUB -W 00:20
 
 module load cuda
 
-mpirun -n 64 --map-by ppr:16:node ./MPS_crash
+mpirun -n 16 --map-by ppr:16:node ./MPS_crash
