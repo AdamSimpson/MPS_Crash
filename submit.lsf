@@ -6,7 +6,6 @@
 #BSUB -n 80
 #BSUB -W 00:20
 
-module switch xl pgi
 module load cuda
 
 mpirun -gpu -n 64 --map-by ppr:16:node MPS_crash 1> std.out 2> std.err

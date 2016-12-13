@@ -1,13 +1,15 @@
-# To build on summitdev
+# To build
 
+## Setup environment on summitdev
 ```
-module switch xl pgi
 module load cmake cuda
+```
 
+## Build the MPS_crash reproducer
 ```
 $ mkdir build
 $ cd build
-$ CC=pgcc CXX=pgc++ cmake ..
+$ CC=gcc CXX=g++ cmake ..
 $ make
 $ cd ..
 $ cp build/MPS_crash .
