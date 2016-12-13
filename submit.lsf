@@ -1,11 +1,11 @@
 #! /bin/bash -l
 #BSUB -q batch
 #BSUB -J MPS_crash
-#BSUB -o staged_std.out
-#BSUB -e staged_std.err
+#BSUB -o mps.o%J
+#BSUB -e mps.e%J
 #BSUB -n 80
 #BSUB -W 00:20
 
 module load cuda
 
-mpirun -gpu -n 64 --map-by ppr:16:node MPS_crash 1> std.out 2> std.err
+mpirun -gpu -n 64 --map-by ppr:16:node ./MPS_crash
