@@ -7,6 +7,8 @@ module load cmake cuda
 
 ## Build the MPS_crash reproducer
 ```
+$ git clone https://github.com/AdamSimpson/MPS_Crash.git
+$ cd MPS_Crash
 $ mkdir build
 $ cd build
 $ CC=gcc CXX=g++ cmake ..
